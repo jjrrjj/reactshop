@@ -7,9 +7,12 @@ const CollectionItem = (item) => {
   console.log(item)
   return (
     <div className="collection-item">
-      <div style={{backgroundImage : `url(${item.imageUrl})`}}
-      className="collection-image">
+      <div className="collection-image-container">
+        <div style={{backgroundImage : `url(${item.imageUrl})`}}
+        className="collection-image">
+        </div>
       </div>
+
       <div className="collection-content">
         <span>{item.name}</span>
         <span>{item.price}</span>
@@ -19,6 +22,7 @@ const CollectionItem = (item) => {
 }
 
 const Collection = (collection) => {
+
   return (
     <div key={collection.id} className="collection">
       <h1 className="collection-title">{collection.title}</h1>
