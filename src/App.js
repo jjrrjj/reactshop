@@ -2,6 +2,7 @@ import React from 'react';
 import './App.scss';
 import { Route, Link,Switch} from "react-router-dom";
 import HomePage from './Pages/HomePage/HomePage.component'
+import SignIn from './Pages/SignIn/SignIn.component'
 import Shop from './Pages/Shop/Shop.component'
 
 import './App.scss';
@@ -66,15 +67,19 @@ function App() {
             <li>
               <Link to="/shop/">Shop All</Link>
             </li>
+            <li>
+              <Link to="/signin/">Sign In</Link>
+            </li>
           </ul>
         </nav>
 
       <Switch>
         <Route path="/" exact component={HomePage}/>
-        <Route path="/shop/:item" component={Shop}/>
         <Route path="/shop/" exact component={Shop}/>
+        <Route path="/shop/:item" component={Shop}/>
         <Route path="/about" component={About}/>
         <Route path="/contact" component={Contact}/>
+        <Route path="/signin" component={SignIn}/>
         <Route component={NotFound}/>
       </Switch>
     </div>
